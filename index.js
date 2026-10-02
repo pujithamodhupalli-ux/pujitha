@@ -1,72 +1,61 @@
 /**
- * Portfolio JavaScript - Modhupalli Pujitha
- * GitHub Pages Compatible Vanilla JS
+ * Modhupalli Pujitha - Portfolio Interactivity Script
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Dynamic Footer Year
+    // 1. Dynamic Current Year in Footer
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
     // 2. Mobile Navigation Toggle
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', !isExpanded);
-            navMenu.classList.toggle('active');
+    if (hamburgerBtn && navLinks) {
+        hamburgerBtn.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('active');
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
+            
+            // Animate hamburger bars
+            hamburgerBtn.classList.toggle('open');
         });
 
-        // Close menu when clicking navigation link
-        navLinks.forEach(link => {
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', 'false');
+                navLinks.classList.remove('active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
             });
         });
     }
 
-    // 3. Header Active Link Highlight on Scroll
-    const sections = document.querySelectorAll('section[id]');
-    
-    const highlightNavOnScroll = () => {
-        const scrollY = window.pageYOffset;
+    // 3. Scroll Progress Indicator & Back-to-Top Button
+    const scrollProgress = document.getElementById('scroll-progress');
+    const backToTopBtn = document.getElementById('back-to-top');
 
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 100;
-            const sectionId = current.getAttribute('id');
-            const navTarget = document.querySelector(`.nav-list a[href*="#${sectionId}"]`);
+    window.addEventListener('scroll', () => {
+        const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = (window.scrollY / totalHeight) * 100;
+        
+        if (scrollProgress) {
+            scrollProgress.style.width = `${progress}%`;
+        }
 
-            if (navTarget) {
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navTarget.classList.add('active');
-                } else {
-                    navTarget.classList.remove('active');
-                }
-            }
-        });
-    };
-
-    window.addEventListener('scroll', highlightNavOnScroll);
-
-    // 4. Back to Top Button Control
-    const backToTopBtn = document.getElementById('backToTop');
-
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 400) {
+        if (backToTopBtn) {
+            if (window.scrollY > 400) {
                 backToTopBtn.classList.add('visible');
             } else {
                 backToTopBtn.classList.remove('visible');
             }
-        });
+        }
 
+        // Active Navbar Link Detection
+        highlightActiveSection();
+    });
+
+    if (backToTopBtn) {
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
@@ -75,27 +64,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Scroll Reveal Intersection Observer (Subtle Entry Animations)
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // 4. Highlight Active Navigation Section on Scroll
+    function highlightActiveSection() {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPosition = window.scrollY + 100;
 
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            const navAnchor = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+            if (navAnchor) {
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navAnchor.classList.add('active');
+                } else {
+                    navAnchor.classList.remove('active');
+                }
             }
         });
-    }, observerOptions);
+    }
 
-    const cards = document.querySelectorAll('.about-card, .timeline-content, .skill-category-card, .cert-card, .strength-card');
-    cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        revealObserver.observe(card);
-    });
+    // 5. Contact Form Handling
+    window.handleFormSubmit = function() {
+        const nameInput = document.getElementById('form-name');
+        const emailInput = document.getElementById('form-email');
+        const messageInput = document.getElementById('form-message');
+        const statusMsg = document.getElementById('form-status');
+
+        if (nameInput && emailInput && messageInput && statusMsg) {
+            statusMsg.style.color = '#14f195';
+            statusMsg.textContent = `Thank you, ${nameInput.value}! Your message has been sent successfully.`;
+
+            // Clear inputs
+            nameInput.value = '';
+            emailInput.value = '';
+            messageInput.value = '';
+
+            setTimeout(() => {
+                statusMsg.textContent = '';
+            }, 5000);
+        }
+    };
 });

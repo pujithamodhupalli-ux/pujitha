@@ -3,118 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Modhupalli Pujitha - Computer Science & Engineering Graduate specializing in Python, HTML, and Digital Image Processing.">
+    <title>Modhupalli Pujitha | Computer Science & Engineering Graduate</title>
+    <meta name="description" content="Portfolio of Modhupalli Pujitha, a detail-oriented Computer Science & Engineering graduate skilled in Python, Web Development, and AI.">
     <meta name="author" content="Modhupalli Pujitha">
-    <title>Modhupalli Pujitha | Computer Science Engineer</title>
     
-    <!-- Open Graph Metadata -->
-    <meta property="og:title" content="Modhupalli Pujitha - Portfolio">
-    <meta property="og:description" content="Computer Science & Engineering Graduate specializing in Python, HTML, and Digital Image Processing.">
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Modhupalli Pujitha | Portfolio">
+    <meta property="og:description" content="Entry-level Computer Science & Engineering graduate seeking opportunities in software engineering and tech innovation.">
     <meta property="og:type" content="website">
 
-    <!-- Google Fonts -->
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- FontAwesome Icons CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- Navigation Header -->
-    <header class="navbar-header" id="navbar">
-        <div class="nav-container">
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar-header">
+        <nav class="navbar" aria-label="Main Navigation">
             <a href="#hero" class="nav-logo" aria-label="Modhupalli Pujitha Home">
                 <span class="logo-box">MP</span>
-                <span class="logo-text">PUJITHA</span>
+                <span class="logo-text">PUJITHA<span class="accent-dot">.</span></span>
             </a>
 
-            <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
-                <ul class="nav-list">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#education" class="nav-link">Education</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                    <li><a href="#highlights" class="nav-link">Highlights</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#highlights" class="nav-link">Highlights</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-cta-mobile">
+                    <a href="assets/resume.pdf" class="btn btn-outline" download="Modhupalli_Pujitha_Resume.pdf">
+                        <i class="fa-solid fa-download"></i> Resume
+                    </a>
+                </li>
+            </ul>
 
             <div class="nav-actions">
-                <a href="assets/resume.pdf" class="btn btn-outline" target="_blank" download="Modhupalli_Pujitha_Resume.pdf">
-                    <i class="fa-solid fa-download"></i>
-                    <span>Resume</span>
+                <a href="assets/resume.pdf" class="btn btn-outline nav-resume-btn" download="Modhupalli_Pujitha_Resume.pdf">
+                    <i class="fa-solid fa-download"></i> Resume
                 </a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <button class="hamburger-menu" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </button>
             </div>
-        </div>
+        </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <div class="hero-bg-grid"></div>
+        <section id="hero" class="hero-section">
             <div class="container hero-container">
                 <div class="hero-content">
                     <div class="hero-badge">
-                        <span class="status-dot"></span> Available for Engineering Roles
+                        <span class="status-indicator"></span> Open to Entry-Level Tech Roles
                     </div>
-                    <h1 class="hero-title">Modhupalli Pujitha</h1>
-                    <p class="hero-subtitle">Computer Science & Engineering Graduate</p>
+                    <h1 class="hero-title">
+                        Hello, I'm <span class="gradient-text">Modhupalli Pujitha</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Computer Science & Engineering Graduate</h2>
                     <p class="hero-description">
-                        Passionate about expanding technical knowledge, developing clean solutions in Python and Web Technologies, and applying concepts from Digital Image Processing to contribute meaningfully to engineering success.
+                        Detail-oriented engineering graduate with a passion for technology, web development, and problem-solving. Eager to leverage academic foundation and soft skills to drive meaningful tech innovation.
                     </p>
-                    
+
                     <div class="hero-meta">
-                        <div class="meta-item">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Andhra Pradesh, India</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>modhupallipujitha@gmail.com</span>
-                        </div>
+                        <span><i class="fa-solid fa-location-dot"></i> Raghavampalli, Anantapur, AP</span>
+                        <span><i class="fa-solid fa-graduation-cap"></i> B.Tech CSE (2026)</span>
                     </div>
 
-                    <div class="hero-cta">
+                    <div class="hero-actions">
                         <a href="#contact" class="btn btn-primary">
-                            <span>Get in Touch</span>
-                            <i class="fa-solid fa-arrow-right"></i>
+                            <i class="fa-solid fa-paper-plane"></i> Get in Touch
                         </a>
-                        <a href="assets/resume.pdf" class="btn btn-secondary" target="_blank" download="Modhupalli_Pujitha_Resume.pdf">
-                            <i class="fa-solid fa-file-pdf"></i>
-                            <span>Download Resume</span>
+                        <a href="assets/resume.pdf" class="btn btn-secondary" download="Modhupalli_Pujitha_Resume.pdf">
+                            <i class="fa-solid fa-file-pdf"></i> Download CV
                         </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="mailto:modhupallipujitha@gmail.com" aria-label="Email Pujitha"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:9642188154" aria-label="Call Pujitha"><i class="fa-solid fa-phone"></i></a>
+                        <a href="#contact" aria-label="Contact Section"><i class="fa-solid fa-address-card"></i></a>
                     </div>
                 </div>
 
-                <div class="hero-card-wrapper">
-                    <div class="code-card">
-                        <div class="code-header">
+                <div class="hero-visual">
+                    <div class="card-glass console-card">
+                        <div class="console-header">
                             <span class="dot red"></span>
                             <span class="dot yellow"></span>
                             <span class="dot green"></span>
-                            <span class="code-title">engineer.py</span>
+                            <span class="console-title">pujitha@developer-workspace:~</span>
                         </div>
-                        <div class="code-body">
-<pre><code><span class="keyword">class</span> <span class="class-name">Engineer</span>:
-    <span class="keyword">def</span> <span class="function">__init__</span>(self):
-        self.name = <span class="string">"Modhupalli Pujitha"</span>
-        self.degree = <span class="string">"B.Tech CSE"</span>
-        self.focus = [<span class="string">"Python"</span>, <span class="string">"HTML"</span>, <span class="string">"Image Processing"</span>]
-        self.mindset = [<span class="string">"Quick Learner"</span>, <span class="string">"Detail Oriented"</span>]
-
-    <span class="keyword">def</span> <span class="function">objective</span>(self):
-        <span class="keyword">return</span> <span class="string">"To make a meaningful contribution to company success."</span>
-</code></pre>
+                        <div class="console-body">
+                            <p><span class="prompt">$</span> <span class="command">cat profile.json</span></p>
+                            <pre class="json-output">
+{
+  <span class="key">"name"</span>: <span class="string">"Modhupalli Pujitha"</span>,
+  <span class="key">"degree"</span>: <span class="string">"B.Tech - CSE"</span>,
+  <span class="key">"location"</span>: <span class="string">"Andhra Pradesh, India"</span>,
+  <span class="key">"coreSkills"</span>: [<span class="string">"Python"</span>, <span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"C"</span>],
+  <span class="key">"status"</span>: <span class="string">"Ready for Opportunities"</span>
+}
+                            </pre>
+                            <p><span class="prompt">$</span> <span class="command">echo $CAREER_OBJECTIVE</span></p>
+                            <p class="objective-output">
+                              "Motivated and detail-oriented engineering graduate looking for an entry-level opportunity to contribute and grow."
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -122,116 +127,181 @@
         </section>
 
         <!-- About Section -->
-        <section class="section about" id="about">
+        <section id="about" class="section-padding">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Overview</span>
+                <div class="section-header text-center">
+                    <span class="section-subtitle">OVERVIEW</span>
                     <h2 class="section-title">About Me</h2>
+                    <div class="title-underline"></div>
                 </div>
+
                 <div class="about-grid">
-                    <div class="about-card main-card">
-                        <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <div class="about-card card-glass">
+                        <div class="about-icon"><i class="fa-solid fa-bullseye"></i></div>
                         <h3>Career Objective</h3>
                         <p>
-                            To secure a challenging position in a reputable organization to expand my knowledge, skills, and learnings while making a meaningful contribution to the success of the company.
+                            Motivated and detail-oriented engineering graduate with a passion for technology and innovation. Eager to apply academic knowledge and soft skills in a professional setting, looking for an entry-level opportunity to contribute and grow within a dynamic team.
                         </p>
                     </div>
-                    <div class="about-card side-card">
-                        <div class="card-icon"><i class="fa-solid fa-language"></i></div>
-                        <h3>Languages Known</h3>
-                        <ul class="styled-list">
-                            <li><i class="fa-solid fa-check"></i> English (Professional/Academic)</li>
-                            <li><i class="fa-solid fa-check"></i> Telugu (Native)</li>
+
+                    <div class="about-card card-glass">
+                        <div class="about-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                        <h3>Academic Profile</h3>
+                        <p>
+                            Currently completing Bachelor of Technology (B.Tech) in Computer Science & Engineering at Ashoka Women's Engineering College, Kurnool. Maintained a consistent academic record with a strong foundation in computer science principles.
+                        </p>
+                    </div>
+
+                    <div class="about-card card-glass">
+                        <div class="about-icon"><i class="fa-solid fa-compass"></i></div>
+                        <h3>Interests & Hobbies</h3>
+                        <ul class="interests-list">
+                            <li><i class="fa-solid fa-gamepad"></i> Playing games</li>
+                            <li><i class="fa-solid fa-book-open"></i> Reading books</li>
+                            <li><i class="fa-solid fa-music"></i> Listening to music</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section class="section education" id="education">
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding bg-alt">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Academic Background</span>
-                    <h2 class="section-title">Education</h2>
+                <div class="section-header text-center">
+                    <span class="section-subtitle">CAPABILITIES</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="title-underline"></div>
                 </div>
 
-                <div class="timeline">
-                    <!-- B.Tech -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <span class="degree-badge">Graduation</span>
-                                <span class="score-badge">79%</span>
+                <div class="skills-grid">
+                    <div class="skill-card card-glass">
+                        <div class="skill-header">
+                            <i class="fa-brands fa-python skill-icon"></i>
+                            <div>
+                                <h3>Python</h3>
+                                <span class="skill-tag">Core Language</span>
                             </div>
-                            <h3 class="degree-title">B.Tech - Computer Science and Engineering</h3>
-                            <p class="institution">Ashoka Women's Engineering College, Dupadu, Kurnool</p>
-                            <p class="education-notes">
-                                Focused on foundational computer science principles, core software engineering, data structures, algorithms, and digital image processing coursework.
-                            </p>
                         </div>
+                        <p>Fundamental programming, logic building, and implementation for software solutions.</p>
                     </div>
 
-                    <!-- Intermediate -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <span class="degree-badge">Intermediate (MPC)</span>
-                                <span class="score-badge">73%</span>
+                    <div class="skill-card card-glass">
+                        <div class="skill-header">
+                            <i class="fa-brands fa-html5 skill-icon"></i>
+                            <div>
+                                <h3>HTML & CSS</h3>
+                                <span class="skill-tag">Web Frontend</span>
                             </div>
-                            <h3 class="degree-title">Intermediate - MPC (Maths, Physics, Chemistry)</h3>
-                            <p class="institution">SLN Junior College, Anantapur</p>
                         </div>
+                        <p>Designing structured, clean, and styled user interfaces for web platforms.</p>
                     </div>
 
-                    <!-- SSC -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-header">
-                                <span class="degree-badge">Secondary School</span>
-                                <span class="score-badge">93%</span>
+                    <div class="skill-card card-glass">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-code skill-icon"></i>
+                            <div>
+                                <h3>C Programming</h3>
+                                <span class="skill-tag">Basics</span>
                             </div>
-                            <h3 class="degree-title">SSC (Secondary School Certificate)</h3>
-                            <p class="institution">Kasthuriba Gandhi Balika Vidhalaya School, Sanjeevapuram</p>
                         </div>
+                        <p>Fundamental concepts of procedural programming and memory management structures.</p>
+                    </div>
+
+                    <div class="skill-card card-glass">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-brain skill-icon"></i>
+                            <div>
+                                <h3>Artificial Intelligence</h3>
+                                <span class="skill-tag">Certified Domain</span>
+                            </div>
+                        </div>
+                        <p>Knowledge of AI foundations acquired through professional IBM certification.</p>
+                    </div>
+
+                    <div class="skill-card card-glass">
+                        <div class="skill-header">
+                            <i class="fa-solid fa-image skill-icon"></i>
+                            <div>
+                                <h3>Digital Image Processing</h3>
+                                <span class="skill-tag">NPTEL Certified</span>
+                            </div>
+                        </div>
+                        <p>Theoretical and analytical concepts of digital image techniques and operations.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Skills Section -->
-        <section class="section skills" id="skills">
+        <!-- Education Section -->
+        <section id="education" class="section-padding">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Technical Competencies</span>
-                    <h2 class="section-title">Technical Skills & Tools</h2>
+                <div class="section-header text-center">
+                    <span class="section-subtitle">BACKGROUND</span>
+                    <h2 class="section-title">Education</h2>
+                    <div class="title-underline"></div>
                 </div>
 
-                <div class="skills-grid">
-                    <div class="skill-category-card">
-                        <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
-                        <h3>Programming Languages</h3>
-                        <div class="tag-group">
-                            <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                <div class="timeline">
+                    <!-- B.Tech -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="timeline-content card-glass">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="degree-title">Bachelor of Technology (B.Tech)</h3>
+                                    <h4 class="institution">Computer Science & Engineering</h4>
+                                    <p class="college-name"><i class="fa-solid fa-building-columns"></i> Ashoka Women's Engineering College, Kurnool</p>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="badge date-badge">Oct 2022 - Apr 2026</span>
+                                </div>
+                            </div>
+                            <div class="timeline-metrics">
+                                <span class="metric-pill"><i class="fa-solid fa-chart-line"></i> CGPA: 7.59 / 10</span>
+                                <span class="metric-pill"><i class="fa-solid fa-percent"></i> Percentage: 75%</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="skill-category-card">
-                        <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
-                        <h3>Web Technologies</h3>
-                        <div class="tag-group">
-                            <span class="tech-tag"><i class="fa-brands fa-html5"></i> HTML</span>
+                    <!-- Intermediate -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
+                        <div class="timeline-content card-glass">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="degree-title">Intermediate (MPC)</h3>
+                                    <h4 class="institution">Mathematics, Physics, Chemistry</h4>
+                                    <p class="college-name"><i class="fa-solid fa-building-columns"></i> Sln Junior College, Anantapur</p>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="badge date-badge">Oct 2020 - Mar 2022</span>
+                                </div>
+                            </div>
+                            <div class="timeline-metrics">
+                                <span class="metric-pill"><i class="fa-solid fa-percent"></i> Percentage: 73%</span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="skill-category-card">
-                        <div class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                        <h3>Development Tools</h3>
-                        <div class="tag-group">
-                            <span class="tech-tag"><i class="fa-solid fa-code"></i> Visual Studio Code</span>
+                    <!-- SSC -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"><i class="fa-solid fa-award"></i></div>
+                        <div class="timeline-content card-glass">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3 class="degree-title">Secondary School Certificate (SSC)</h3>
+                                    <h4 class="institution">Standard 10th Education</h4>
+                                    <p class="college-name"><i class="fa-solid fa-building-columns"></i> Kasthurba Gandhi Balika Vidhalaya, Sanjeevapuram</p>
+                                </div>
+                                <div class="timeline-date">
+                                    <span class="badge date-badge">Completed Mar 2020</span>
+                                </div>
+                            </div>
+                            <div class="timeline-metrics">
+                                <span class="metric-pill highlight-metric"><i class="fa-solid fa-star"></i> GPA: 9.85 / 10</span>
+                                <span class="metric-pill"><i class="fa-solid fa-percent"></i> Percentage: 98%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -239,79 +309,99 @@
         </section>
 
         <!-- Certifications Section -->
-        <section class="section certifications" id="certifications">
+        <section id="certifications" class="section-padding bg-alt">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Continuous Learning</span>
-                    <h2 class="section-title">Certifications</h2>
+                <div class="section-header text-center">
+                    <span class="section-subtitle">CREDENTIALS</span>
+                    <h2 class="section-title">Certifications & Achievements</h2>
+                    <div class="title-underline"></div>
                 </div>
 
-                <div class="cert-grid">
-                    <div class="cert-card">
-                        <div class="cert-badge"><i class="fa-solid fa-award"></i></div>
+                <div class="certifications-grid">
+                    <div class="cert-card card-glass">
+                        <div class="cert-icon-wrapper">
+                            <i class="fa-solid fa-certificate cert-icon"></i>
+                        </div>
                         <div class="cert-content">
-                            <span class="cert-issuer">NPTEL</span>
-                            <h3 class="cert-title">Digital Image Processing</h3>
-                            <p class="cert-desc">Earned NPTEL Certification covering core digital image processing fundamentals, matrix operations, filter techniques, and computer vision concepts.</p>
+                            <span class="cert-issuer">IBM</span>
+                            <h3>Getting Started with Artificial Intelligence</h3>
+                            <p>Foundational knowledge in AI concepts, machine learning principles, and intelligent systems design.</p>
                         </div>
                     </div>
 
-                    <div class="cert-card">
-                        <div class="cert-badge"><i class="fa-solid fa-certificate"></i></div>
+                    <div class="cert-card card-glass">
+                        <div class="cert-icon-wrapper">
+                            <i class="fa-solid fa-award cert-icon"></i>
+                        </div>
                         <div class="cert-content">
-                            <span class="cert-issuer">Course Certification</span>
-                            <h3 class="cert-title">C Programming Course Certificate</h3>
-                            <p class="cert-desc">Certified in procedural programming techniques, standard algorithms, memory architecture, and structured problem solving in C.</p>
+                            <span class="cert-issuer">NPTEL</span>
+                            <h3>Digital Image Processing</h3>
+                            <p>Comprehensive course certification covering image transformation, filtering, and computer vision foundations.</p>
+                        </div>
+                    </div>
+
+                    <div class="cert-card card-glass">
+                        <div class="cert-icon-wrapper">
+                            <i class="fa-solid fa-laptop-code cert-icon"></i>
+                        </div>
+                        <div class="cert-content">
+                            <span class="cert-issuer">Programming Certification</span>
+                            <h3>C Programming Course</h3>
+                            <p>Certification validating foundational understanding of logic syntax, algorithms, and modular C programming.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Strengths / Highlights Section -->
-        <section class="section highlights" id="highlights">
+        <!-- Highlights Section -->
+        <section id="highlights" class="section-padding">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Professional Traits</span>
-                    <h2 class="section-title">Key Strengths</h2>
+                <div class="section-header text-center">
+                    <span class="section-subtitle">STRENGTHS</span>
+                    <h2 class="section-title">Career Highlights & Value</h2>
+                    <div class="title-underline"></div>
                 </div>
 
-                <div class="strengths-grid">
-                    <div class="strength-card">
-                        <div class="strength-icon"><i class="fa-solid fa-bolt"></i></div>
-                        <h3>Self-Motivated</h3>
-                        <p>Driven by an inner impulse to learn new concepts independently and deliver consistently high standard output.</p>
+                <div class="highlights-grid">
+                    <div class="highlight-box card-glass">
+                        <i class="fa-solid fa-lightbulb highlight-icon"></i>
+                        <h3>Analytical Problem Solving</h3>
+                        <p>Solid grasp of Computer Science core principles and mathematical problem-solving skills demonstrated through strong academic consistency.</p>
                     </div>
 
-                    <div class="strength-card">
-                        <div class="strength-icon"><i class="fa-solid fa-brain"></i></div>
-                        <h3>Quick Learner</h3>
-                        <p>Adept at grasping modern frameworks, tools, and technical concepts rapidly to adapt to dynamic engineering environments.</p>
+                    <div class="highlight-box card-glass">
+                        <i class="fa-solid fa-microchip highlight-icon"></i>
+                        <h3>Continuous Tech Learning</h3>
+                        <p>Proactive learning mindset evidenced by completing specialized online courses and certifications in AI, C programming, and Image Processing.</p>
                     </div>
 
-                    <div class="strength-card">
-                        <div class="strength-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
-                        <h3>Attention to Detail</h3>
-                        <p>Meticulous approach to writing code, evaluating academic problems, and ensuring accuracy across all deliverables.</p>
+                    <div class="highlight-box card-glass">
+                        <i class="fa-solid fa-handshake highlight-icon"></i>
+                        <h3>Professional Integrity</h3>
+                        <p>Detail-oriented team member with strong soft skills, adaptable attitude, and readiness to contribute positively to entry-level tech roles.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="section contact" id="contact">
+        <section id="contact" class="section-padding bg-alt">
             <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">CONNECT</span>
+                    <h2 class="section-title">Contact Information</h2>
+                    <div class="title-underline"></div>
+                </div>
+
                 <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <span class="section-tag">Reach Out</span>
-                        <h2 class="contact-title">Let's Connect</h2>
-                        <p class="contact-desc">
-                            I am actively seeking software engineering positions and technical opportunities. Feel free to reach out directly through email or phone.
-                        </p>
+                    <div class="contact-info-card card-glass">
+                        <h3>Let's Get in Touch</h3>
+                        <p>Feel free to reach out for entry-level opportunities, internships, or professional collaborations.</p>
 
                         <div class="contact-details">
                             <a href="mailto:modhupallipujitha@gmail.com" class="contact-item">
-                                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
                                 <div>
                                     <span class="contact-label">Email</span>
                                     <span class="contact-value">modhupallipujitha@gmail.com</span>
@@ -319,7 +409,7 @@
                             </a>
 
                             <a href="tel:9642188154" class="contact-item">
-                                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
                                 <div>
                                     <span class="contact-label">Phone</span>
                                     <span class="contact-value">+91 9642188154</span>
@@ -327,24 +417,45 @@
                             </a>
 
                             <div class="contact-item">
-                                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
                                 <div>
                                     <span class="contact-label">Location</span>
-                                    <span class="contact-value">Andhra Pradesh, India</span>
+                                    <span class="contact-value">Raghavampalli, Anantapur, Andhra Pradesh</span>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="declaration-box">
+                            <h4><i class="fa-solid fa-shield-halved"></i> Declaration</h4>
+                            <p>"I hereby declare that the above-mentioned information is correct and true to the best of my knowledge and belief."</p>
+                            <span class="declaration-place">Place: Kurnool</span>
+                        </div>
                     </div>
 
-                    <div class="contact-declaration-card">
-                        <h3><i class="fa-solid fa-shield-halved"></i> Declaration</h3>
-                        <p class="declaration-text">
-                            "I hereby declare that the above given information is true to the best of my knowledge and belief."
-                        </p>
-                        <div class="declaration-signature">
-                            <span class="sig-name">M. Pujitha</span>
-                            <span class="sig-role">Modhupalli Pujitha</span>
-                        </div>
+                    <!-- Direct Message Form -->
+                    <div class="contact-form-card card-glass">
+                        <h3>Send a Direct Message</h3>
+                        <form id="contact-form" onsubmit="event.preventDefault(); handleFormSubmit();">
+                            <div class="form-group">
+                                <label for="form-name">Your Name</label>
+                                <input type="text" id="form-name" required placeholder="Enter your full name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-email">Your Email</label>
+                                <input type="email" id="form-email" required placeholder="name@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-message">Message</label>
+                                <textarea id="form-message" rows="4" required placeholder="Write your message here..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+                            <div id="form-status" class="form-status-msg"></div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -354,29 +465,34 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container footer-container">
-            <div class="footer-left">
-                <a href="#hero" class="nav-logo">
-                    <span class="logo-box">MP</span>
-                    <span class="logo-text">PUJITHA</span>
-                </a>
-                <p>© <span id="current-year">2026</span> Modhupalli Pujitha. All rights reserved.</p>
+            <div class="footer-brand">
+                <span class="logo-box">MP</span>
+                <span>MODHUPALLI PUJITHA</span>
             </div>
+
+            <p class="footer-text">
+                Computer Science & Engineering Graduate | Dedicated to Tech Excellence
+            </p>
+
             <div class="footer-links">
                 <a href="#about">About</a>
-                <a href="#education">Education</a>
                 <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
                 <a href="#certifications">Certifications</a>
                 <a href="#contact">Contact</a>
             </div>
+
+            <p class="copyright">
+                &copy; <span id="current-year">2026</span> Modhupalli Pujitha. All rights reserved.
+            </p>
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <!-- Scroll To Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <!-- Custom JavaScript -->
     <script src="index.js"></script>
 </body>
 </html>
